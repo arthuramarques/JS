@@ -9,3 +9,4 @@ de
 múltiplas linhas 
 */
 // tentar evitar comentários óbvios em um programa real.
+console.log("Teste 2");
