@@ -14,4 +14,6 @@
 }
 // normalmente existe um pq para a criação de um bloco de codigo 
 // o código é organziado em pastas, arquivos, sentenças + blocos de códigos 
-
+{
+    console.log("isso é um teste");
+}
