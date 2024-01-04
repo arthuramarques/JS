@@ -6,4 +6,4 @@ const PI = 3.141592;
 let areaCircunferencia = raio * raio * PI; 
 
 console.log("O valor da áre é igual a " + areaCircunferencia + " m²");
-console.log(Math.PI);
+console.log(Math.PI); // valor mais preciso de PI, dentro do próprio js.
