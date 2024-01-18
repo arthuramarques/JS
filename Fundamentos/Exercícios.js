@@ -92,3 +92,74 @@ return console.log(resultado)
 
 multiplicar(5, 5)
 multiplicar(0, 7)
+//---------------------------------//-----------------------------------//------------------------------------//------------------------7
+//09
+console.log('\n');
+
+function repetir (elementoQueRepete, vezesDeRepeticao) {
+    let saida = [];
+    for(let i = 1; i <= vezesDeRepeticao; i++) {
+        saida.push(elementoQueRepete);
+    }
+    return console.log(saida);
+}
+repetir("código", 2) // retornará ["código", "código"]
+repetir(7, 3) // retornará [7, 7, 7]
+//---------------------------//---------------------------//---------------------------//------------------------------//--------------
+//10
+console.log('\n');
+
+function simboloMais(num) {
+    let linha = '';
+    for (let i = 1; i <= num; i++) {
+        linha += '+';
+    }
+console.log(linha);
+}
+simboloMais(2) // retornará "++"
+simboloMais(4) // retornará "++++"
+//-----------------------------------//----------------------------------//---------------------------------//-------------------------
+//11
+console.log('\n');
+
+function receberPrimeiroEUltimoElemento (array) {
+    primeiroEUltimo = [array[0], array[array.length - 1]]
+    return console.log (primeiroEUltimo);
+}
+
+receberPrimeiroEUltimoElemento([7,14,"olá"]) // retornará [7, "olá"]
+receberPrimeiroEUltimoElemento([-100, "aplicativo", 16]) // retornará [-100, 16]
+//----------------------------//-------------------------------------//-----------------------------------------//--------------------
+//12
+console.log('\n');
+
+function removerPropriedade (objeto, propriedade) {
+    delete objeto [propriedade];
+    return console.log(objeto);
+}
+
+removerPropriedade({a: 1, b: 2}, "a") // retornará {b: 2}
+removerPropriedade({
+id: 20,
+nome: "caneta",
+descricao: "Não preenchido"
+}, "descricao") // retornará {id: 20, nome: "caneta"}
+//-----------------------------------------//----------------------------------------//----------------------------------//-----------
+//13
+console.log('\n');
+
+function filtrarNumeros (array) {
+ let saida = [];
+    for (let vetor of array) {
+    if (typeof vetor === 'number') {
+        saida.push(vetor);
+    }
+ } return console.log(saida);
+}
+
+filtrarNumeros(["Javascript", 1, "3", "Web", 20]) // retornará [1, 20]
+filtrarNumeros(["a",2,"c", 'd', 'f', 'g']) // retornará []
+//----------------------------//-------------------------------------//---------------------------------------------//------------------
+//14
+console.log('\n');
+
