@@ -163,3 +163,55 @@ filtrarNumeros(["a",2,"c", 'd', 'f', 'g']) // retornará []
 //14
 console.log('\n');
 
+function objetoParaArray (objeto) {
+    let saida = [];
+    for (let item in objeto) {
+     saida.push([item, objeto[item]]);     
+    } 
+    return console.log(saida);
+}
+
+objetoParaArray({
+    nome: "Maria",
+    profissao: "Desenvolvedora de software"
+    }) // irá retornar [["nome", "Maria"], ["profissao", "Desenvolvedora de Software"]]
+    objetoParaArray({
+    codigo: 11111,
+    preco: 12000
+    }) // irá retornar [["codigo", 11111], ["preco", 12000]]
+    //--------------------------------------------//-------------------------------------------//-----------------------------------------//-------
+    //15
+ console.log('\n');
+    
+ function receberSomenteOsParesDeIndicesPares (array) {
+     let saida = [];
+     for (let i in array) {
+            if (i % 2 === 0) {
+                if (array[i] % 2 === 0) {
+                    saida.push(array[i]);
+                }
+            }
+    } return console.log(saida);
+}
+    receberSomenteOsParesDeIndicesPares([1, 2, 3, 4]) // retornará []
+receberSomenteOsParesDeIndicesPares([10, 70, 22, 43]) // retornará [10, 22]
+//--------------------------------------------------//----------------------------------------------------//-----------------------------------------
+//16
+console.log('\n');
+
+function checarAnoBissexto (numero) {
+if (numero % 4 == 0) {
+    return console.log(true);
+} else {
+    if (numero % 100 == 0 && numero % 400 == 0) {
+        return console.log(true);
+    } else {
+        return console.log(false);
+    }
+} 
+
+}
+
+
+checarAnoBissexto(2020) // retornará true
+checarAnoBissexto(2100) // retornará false, pois é múltiplo de 100 e não é múltiplo de 400
