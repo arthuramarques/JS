@@ -200,18 +200,86 @@ receberSomenteOsParesDeIndicesPares([10, 70, 22, 43]) // retornará [10, 22]
 console.log('\n');
 
 function checarAnoBissexto (numero) {
-if (numero % 4 == 0) {
-    return console.log(true);
-} else {
-    if (numero % 100 == 0 && numero % 400 == 0) {
-        return console.log(true);
+    if (numero % 100 == 0) {
+        if (numero % 400 == 0) {
+            return console.log(true);
+        } else {
+            return console.log(false);
+        }
     } else {
-        return console.log(false);
+        if (numero % 4 == 0) {
+            return console.log(true);
+        } else {
+            return console.log(false);
+        }
     }
-} 
-
 }
-
 
 checarAnoBissexto(2020) // retornará true
 checarAnoBissexto(2100) // retornará false, pois é múltiplo de 100 e não é múltiplo de 400
+//-------------------------------------------//-------------------------------------------------//----------------------------------------------------//------------
+//17
+console.log('\n'); 
+
+function somarNumeros (array) {
+    let saida = 0;
+    for (let elemento of array ) {
+     saida += elemento;
+    } 
+    return console.log(saida);
+ } 
+
+
+somarNumeros([10, 10, 10]) // retornará 30
+somarNumeros([15, 15, 15, 15]) // retornará 60
+//--------------------------------------------------------//------------------------------------------//-----------------------------------------------------///----------------
+//18
+console.log('\n'); 
+
+function despesasTotais (array) {
+    let despesas = 0;  
+    for (let elemento of array) {    
+    for (let item in elemento) {
+        objeto = elemento[item];
+        if (typeof objeto === typeof 0) {
+            despesas += objeto;
+        }
+    }
+    } return console.log(despesas);
+    }
+despesasTotais([
+    {nome: "Jornal online", categoria: "Informação", preco: 89.99},
+    {nome: "Cinema", categoria: "Entretenimento", preco: 150}
+    ]) // retornará 239.99
+    despesasTotais([
+    {nome: "Galaxy S20", categoria: "Eletrônicos", preco: 3599.99},
+    {nome: "Macbook Pro", categoria: "Eletrônicos", preco: 30999.90}
+    ]) // retornará 34599.89
+//---------------------------------------------//-------------------------------------//------------------------------------------------------------------//------------
+//19
+console.log('\n'); 
+
+function calcularMedia (array) {
+    let soma = 0;
+    for (let elementos of array) {
+        soma += elementos;
+    }
+    let media = soma/array.length;
+return console.log(media);
+}
+calcularMedia([0, 10]) // retornará 5
+calcularMedia([1, 2, 3, 4, 5]) // retornará 3
+//---------------------------------------------------//----------------------------------------------//------------------------------------------------//------------------
+//20
+console.log('\n'); 
+
+function areaDoTriangulo (base, altura) {
+    let area = (base * altura)/2;
+    return console.log(area.toFixed(2));
+
+}
+
+areaDoTriangulo(10, 15) // retornará 75.00
+areaDoTriangulo(7, 9) // retornará 31.50
+areaDoTriangulo(9.25, 13.1) // retornará 60.59
+//----------------------------------------------------//----------------------------------------------//-------------------------------------------------------//------------
