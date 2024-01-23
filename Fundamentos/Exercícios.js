@@ -283,3 +283,89 @@ areaDoTriangulo(10, 15) // retornará 75.00
 areaDoTriangulo(7, 9) // retornará 31.50
 areaDoTriangulo(9.25, 13.1) // retornará 60.59
 //----------------------------------------------------//----------------------------------------------//-------------------------------------------------------//------------
+//21
+console.log('\n'); 
+
+function menorNumero(array) {
+    let saida = 0;
+   for (let i = 0; i<= array.length; i++) {
+        let comparacao = array[i]
+        if (comparacao <= array[array.length - i]) {
+            for (let elementos of array) {
+               if (comparacao <= elementos) {
+               saida = comparacao;
+            } else {
+               break;
+            }
+            } 
+            
+            }
+        }
+    return console.log(saida);
+} 
+       
+  
+
+
+menorNumero([10, 5, 35, 65]) // retornará 5
+menorNumero([5, -15, 50, 3]) // retornará -15
+//----------------------------------//-----------------------------------------------//----------------------------------------------//--------------------------------//--------
+//22
+console.log('\n'); 
+
+function funcaoDaSorte (num) {
+    let numeroSorteado = Math.floor(Math.random() * 10 + 1)
+    if (numeroSorteado == num) {
+        return console.log(`Parabéns! O número sorteado foi o ${numeroSorteado}`);
+    } else {
+        return console.log(`Que pena! O número sorteado foi o ${numeroSorteado}`);
+    }
+}
+
+funcaoDaSorte(10) // retornará "Parabéns! O número sorteado foi o 10"
+funcaoDaSorte(5) // retornará "Que pena! O número sorteado foi o 3"
+funcaoDaSorte(5) // retornará "Que pena! O número sorteado foi o 1"
+//----------------------------------------//-------------------------------------------------//-----------------------------------------------------//-------------------
+//23
+console.log('\n'); 
+
+function contarPalavras (string) {
+  arrayRetornado = string.split(" ");
+  return console.log(arrayRetornado.length);
+
+}
+
+contarPalavras("Sou uma frase") // retornará 3
+contarPalavras("Me divirto aprendendo a programar") // retornará 5
+//--------------------------------------//-----------------------------------------------//------------------------------------------------------//------------------------
+//24
+console.log('\n'); 
+
+function contarCaractere (caractere, string) {
+arrayString = string.split('');
+let saida = 0;
+for (let elementos of arrayString) {
+    if (caractere === elementos) {
+        saida++;
+    }
+} return console.log(saida);
+}
+
+contarCaractere("r", "A sorte favorece os audazes") // retornará 2
+contarCaractere("c", "Conhece-te a ti mesmo") // retornará 1
+//-----------------------------//-----------------------------------------------//---------------------------------------------------------//--------------------------------
+//25
+console.log('\n'); 
+
+function buscarPalavrasSemelhantes (palavra, array) {
+    let saida = [];
+    for (let elementos of array) {
+        if (palavra <= elementos) {
+            saida.push(elementos);
+        }
+    } return console.log(saida);
+} 
+
+buscarPalavrasSemelhantes("pro", ["programação", "mobile", "profissional"]) // retornará ["programação", "profissional"]
+buscarPalavrasSemelhantes("python", ["javascript", "java", "c++"]) // retornará []
+//----------------------------------------------------------//------------------------------------------------------------//------------------------------------------//-----
